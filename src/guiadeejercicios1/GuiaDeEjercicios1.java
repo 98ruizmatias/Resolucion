@@ -49,9 +49,21 @@ public class GuiaDeEjercicios1 {
         return limbo;
     }
    
+    /*Ejercicio 4*/
     
-    
-    
+    public static int calculoBoleanos(boolean [] arrayBoole){
+        int contadorPar = 0;
+        int contadorInpar = 0;
+        for(int index = 0; index < arrayBoole.length; index++){
+            
+            if( (index % 2) == 0 || arrayBoole[index] == true){
+                contadorPar++;
+            } else if( (index % 2) != 0 || arrayBoole[index] == false) {
+                contadorInpar++;
+            }
+        }
+            return contadorPar * contadorInpar;
+    }
     
     
     
@@ -104,6 +116,21 @@ public class GuiaDeEjercicios1 {
         {
             System.out.println("No todos positivos");
         }
+        
+        /*Ejercicio 4*/
+        
+        System.out.print("Cuantos valores desea ingresar: ");
+        int vector4Tam = in.nextInt();
+        boolean [] vector4;
+        vector4 = new boolean [vector4Tam];
+        for(int index1 = 0; index1 < vector4Tam; index1++){
+            System.out.println("Ingrese valor: ");
+            vector4[index1] = in.nextBoolean();
+        }
+        int resultado;
+        resultado = GuiaDeEjercicios1.calculoBoleanos(vector4);
+        System.out.println("El producto: " +resultado);        
+        
     }
     
 }
