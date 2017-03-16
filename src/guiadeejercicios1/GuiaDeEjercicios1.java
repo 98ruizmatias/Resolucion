@@ -65,7 +65,32 @@ public class GuiaDeEjercicios1 {
             return contadorPar * contadorInpar;
     }
     
+    /*Ejercicio 5*/
     
+    //Puede un metodo devolver un arreglo? y si se puede como se hace?
+    
+    public static int mixedArrays(int [] arreglo1, int [] arreglo2){
+        int leng;
+        if (arreglo1.length > arreglo2.length){
+            leng = arreglo1.length;
+        } else{
+            leng = arreglo2.length;
+        }
+        
+        int [] aux;
+        aux = new int[leng];
+        for(int index = 0; index < arreglo1.length; index++){
+            if( index%2 != 0 ){
+                aux[index] = arreglo1[index];
+            }
+        }
+        for(int index = 0; index < arreglo2.length; index++){
+            if( index%2 == 0 ){
+                aux[index] = arreglo2[index];
+            }
+        }
+        return aux;
+    }
     
     
         
@@ -129,7 +154,10 @@ public class GuiaDeEjercicios1 {
         }
         int resultado;
         resultado = GuiaDeEjercicios1.calculoBoleanos(vector4);
-        System.out.println("El producto: " +resultado);        
+        System.out.println("El producto: " +resultado);   
+        
+        
+        /*Ejercicio 5*/
         
     }
     
