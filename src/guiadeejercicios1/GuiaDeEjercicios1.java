@@ -97,6 +97,11 @@ public class GuiaDeEjercicios1 {
     
     /*Ejercicio 7*/
     
+    /*Ejercicio 8*/
+    
+    /*Ejercicio 9*/
+    
+    /*Ejercicio 10*/
         
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -220,8 +225,35 @@ public class GuiaDeEjercicios1 {
            vector8Aux[vector8Tam] = vector8[vector8Tam] * 3.14;
         }
         for(int index1 = 0; index1 < vector8Tam; index1++){
-            System.out.println(vector7Aux[index1]);
+            System.out.println(vector8Aux[index1]);
         }
+        
+        /*Ejercicio 9*/
+        
+        System.out.print("Cuantos valores desea ingresar en ambos vectores: ");
+        int vector9Tam = in.nextInt();
+        int [] vector91;
+        vector91 = new int [vector9Tam];
+        for(int index1 = 0; index1 < vector9Tam; index1++){
+            System.out.println("Ingrese valor: ");
+            vector91[index1] = in.nextInt();
+        }
+        int [] vector92;
+        vector92 = new int [vector9Tam];
+        for(int index1 = 0; index1 < vector9Tam; index1++){
+            System.out.println("Ingrese valor: ");
+            vector92[index1] = in.nextInt();
+        }
+        int [] productoEscalar9;
+        productoEscalar9 = new int [vector9Tam];
+        for(int index1 = 0; index1 < vector9Tam; index1++){
+            productoEscalar9[index1] = productoEscalar9[index1 - 1] + ( vector91[index1] * vector92[index1] );
+        }
+        System.out.println("El producto escalar es:");
+        for(int index1 = 0; index1 < vector9Tam; index1++){
+            System.out.println(productoEscalar9[index1]);
+        }
+        /*Ejercicio 10*/
 
     }
     
