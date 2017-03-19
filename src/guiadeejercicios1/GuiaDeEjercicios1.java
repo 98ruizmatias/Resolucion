@@ -68,7 +68,7 @@ public class GuiaDeEjercicios1 {
     /*Ejercicio 5*/
     
     //Puede un metodo devolver un arreglo? y si se puede como se hace?
-    
+    /*
     public static int mixedArrays(int [] arreglo1, int [] arreglo2){
         int leng;
         if (arreglo1.length > arreglo2.length){
@@ -91,7 +91,11 @@ public class GuiaDeEjercicios1 {
         }
         return aux;
     }
+    */
     
+    /*Ejercicio 6*/
+    
+    /*Ejercicio 7*/
     
         
     public static void main(String[] args) {
@@ -159,6 +163,49 @@ public class GuiaDeEjercicios1 {
         
         /*Ejercicio 5*/
         
+        /*Ejercicio 6*/
+        
+        System.out.print("Cuantos valores desea ingresar en el primer vector: ");
+        int vectorATam = in.nextInt();
+        int [] A;
+        A = new int [vectorATam];
+        System.out.print("Cuantos valores desea ingresar en el segundo vector: ");
+        int vectorBTam = in.nextInt();
+        int [] B;
+        B = new int [vectorBTam];
+        int vectorCTam = 0;
+        if(vectorATam > vectorBTam){
+            vectorCTam = vectorATam;
+        } else{
+            vectorCTam = vectorBTam;
+        }
+        int [] C;
+        C = new int [vectorCTam];
+        for(int index = 0; index < vectorCTam; vectorCTam++){
+            C[index] = A[index] * B[index-1];
+        }
+        
+        /*Ejercicio 7*/
+        
+        System.out.print("Cuantos valores desea ingresar: ");
+        int vector7Tam = in.nextInt();
+        int [] vector7;
+        vector7 = new int [vector7Tam];
+        for(int index1 = 0; index1 < vector7Tam; index1++){
+            System.out.println("Ingrese valor: ");
+            vector7[index1] = in.nextInt();
+        }
+        int [] vector7Aux;
+        vector7Aux = new int [vector7Tam];
+        for(int index1 = 0; index1 < vector7Tam; index1++){
+           vector7Aux[vector7Tam-index1] = vector7Tam;
+        }
+        for(int index1 = 0; index1 < vector7Tam; index1++){
+            System.out.println(vector7Aux[index1]);
+        }
+        
+        /*Ejercicio 8*/
+
     }
     
 }
