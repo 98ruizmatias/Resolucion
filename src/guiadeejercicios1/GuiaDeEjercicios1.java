@@ -205,6 +205,23 @@ public class GuiaDeEjercicios1 {
         }
         
         /*Ejercicio 8*/
+        
+        System.out.print("Cuantos valores desea ingresar: ");
+        int vector8Tam = in.nextInt();
+        double [] vector8;
+        vector8 = new double [vector8Tam];
+        for(int index1 = 0; index1 < vector8Tam; index1++){
+            System.out.println("Ingrese valor: ");
+            vector8[index1] = in.nextDouble();
+        }
+        double [] vector8Aux;
+        vector8Aux = new double [vector8Tam];
+        for(int index1 = 0; index1 < vector8Tam; index1++){
+           vector8Aux[vector8Tam] = vector8[vector8Tam] * 3.14;
+        }
+        for(int index1 = 0; index1 < vector8Tam; index1++){
+            System.out.println(vector7Aux[index1]);
+        }
 
     }
     
