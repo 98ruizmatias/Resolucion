@@ -152,8 +152,18 @@ public class GuiaDeEjercicios1 {
     	return duplicado[];
     }
 
+    /*Ejercicio 15*/
 
-
+    /*
+    public static int[] sustitucion(int [] arreglo, int num){
+    	Arrays.sort(arreglo);
+    	for ( int index = 0; index < arreglo.length ; index++ ) {
+    		if ( num < (arreglo.length/2) ) {
+    			
+    		}
+    	}
+    }  
+	*/
 
 
     /*  M A I N  */
@@ -412,7 +422,10 @@ public class GuiaDeEjercicios1 {
         int [] vectorDuplicado14;
         vectorDuplicado14 = new int [vector14*2];
         vectorDuplicado14 = GuiaDeEjercicios1.duplicador(vector14);
-        System.out.println(Arrays.toStrinf(vectorDuplicado14));
+        System.out.println(Arrays.toString(vectorDuplicado14));
+
+        /*Ejercicio 15*/
+
 
     }
     
