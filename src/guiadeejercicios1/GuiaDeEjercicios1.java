@@ -1,5 +1,7 @@
 package guiadeejercicios1;
 import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Collections;
 
 /**
  *
@@ -66,7 +68,7 @@ public class GuiaDeEjercicios1 {
     }
     
     /*Ejercicio 5*/
-    
+        
     //Puede un metodo devolver un arreglo? y si se puede como se hace?
     
     public static int[] mixedArrays(int [] arreglo1, int [] arreglo2){
@@ -101,7 +103,25 @@ public class GuiaDeEjercicios1 {
     /*Ejercicio 9*/
     
     /*Ejercicio 10*/
-        
+   
+    /*Ejercicio 11*/
+
+    public static int buscadorNum(int [] array11, int num){
+        int resultado = 0;
+        for(int index = 0; index < array11.length; index++ ){
+            if(array11[index] == num){
+                resultado = index;
+            }
+        }
+        return resultado;
+    }
+
+    /*Ejercicio 12*/
+
+
+
+    /*  M A I N  */
+    
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         
@@ -286,6 +306,49 @@ public class GuiaDeEjercicios1 {
             System.out.println(productoEscalar10[index1]);
         }
         
+        /*Ejercicio 11*/
+        
+        System.out.print("Cuantos valores desea ingresar en ambos vectores: ");
+        int vector11Tam = in.nextInt();
+        int [] vector11;
+        vector11 = new int [vector11Tam];
+        for(int index1 = 0; index1 < vector11Tam; index1++){
+            System.out.println("Ingrese valor: ");
+            vector11[index1] = in.nextInt();
+        }
+        System.out.print("Ingrese valor a comparar: ");
+        int comparador11 = in.nextInt();
+        int resultado11 = GuiaDeEjercicios1.buscadorNum(vector11, comparador11);
+        if ( resultado11 != 0) {
+        		System.out.println("Su valor se encuentra en la posicion: " +resultado11);
+        } else {
+        	System.out.println("Su valor no se encuentra en el arreglo.");
+        } 
+
+    	/*Ejercicio 12*/
+
+    	System.out.print("Cuantos valores desea ingresar en el vector: ");
+        int vector12Tam = in.nextInt();
+        int [] vector12;
+        vector12 = new int [vector12Tam];
+        for(int index1 = 0; index1 < vector12Tam; index1++){
+            System.out.println("Ingrese valor: ");
+            vector12[index1] = in.nextInt();
+        }
+
+        Arrays.sort(vector12);
+        System.out.println("Orden Ascendente: ");
+        for(int index1 = 0; index1 < vector12Tam; index1++){
+            System.out.println(vector12[index]);
+        }
+
+        Arrays.sort(vector12, Collections.reverseOrder());
+        System.out.println("Orden Ascendente: ");
+        for(int index1 = 0; index1 < vector12Tam; index1++){
+            System.out.println(vector12[index]);
+        }
+
     }
+    
     
 }
