@@ -127,7 +127,7 @@ public class GuiaDeEjercicios1 {
     			if(num == array[index])
     				return true;
     		}
-    	} else if (num <= array[array.length/2] )){
+    	} else if (num =< array[array.length/2])){
 			for (int index = 0; index < (array.length/2); index++ ) {
     			if(num == array[index])
     				return true;
@@ -138,6 +138,15 @@ public class GuiaDeEjercicios1 {
     }
 
     /*Ejercicio 14*/
+
+    public static int[] duplicador(int [] array){
+    	int [] duplicado;
+    	duplicado = new int [array.length*2];
+    	array[] = duplicado[];
+    	for(int index = 0; index < duplicado.length; index++){
+    	}
+
+    }
 
 
 
