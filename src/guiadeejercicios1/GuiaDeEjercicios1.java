@@ -142,11 +142,17 @@ public class GuiaDeEjercicios1 {
     public static int[] duplicador(int [] array){
     	int [] duplicado;
     	duplicado = new int [array.length*2];
-    	array[] = duplicado[];
     	for(int index = 0; index < duplicado.length; index++){
+    		if (index < array.length){
+    			array[index] = duplicado [index];
+    		} else {
+    			duplicado[index] = 10;
+    		}
     	}
-
+    	return duplicado[];
     }
+
+
 
 
 
@@ -380,6 +386,33 @@ public class GuiaDeEjercicios1 {
 
         /*Ejercicio 13*/
 
+        System.out.print("Cuantos valores desea ingresar en el vector: ");
+        int vector13Tam = in.nextInt();
+        int [] vector13;
+        vector13 = new int [vector13Tam];
+        for(int index1 = 0; index1 < vector13Tam; index1++){
+            System.out.println("Ingrese valor: ");
+            vector13[index1] = in.nextInt();
+        }
+        System.out.println("Ingrese un valor");
+        int [] comparador13 = in.nextInt(comparador13);
+        int resultado13 = GuiaDeEjercicios1.buscadorEficiente(vector13, comparador13);
+        System.out.println(resultado13);
+
+        /*Ejercicio 14*/
+
+        System.out.print("Cuantos valores desea ingresar en el vector: ");
+        int vector14Tam = in.nextInt();
+        int [] vector14;
+        vector14 = new int [vector14Tam];
+        for(int index1 = 0; index1 < vector14Tam; index1++){
+            System.out.println("Ingrese valor: ");
+            vector14[index1] = in.nextInt();
+        }
+        int [] vectorDuplicado14;
+        vectorDuplicado14 = new int [vector14*2];
+        vectorDuplicado14 = GuiaDeEjercicios1.duplicador(vector14);
+        System.out.println(Arrays.toStrinf(vectorDuplicado14));
 
     }
     
