@@ -68,8 +68,8 @@ public class GuiaDeEjercicios1 {
     /*Ejercicio 5*/
     
     //Puede un metodo devolver un arreglo? y si se puede como se hace?
-    /*
-    public static int mixedArrays(int [] arreglo1, int [] arreglo2){
+    
+    public static int[] mixedArrays(int [] arreglo1, int [] arreglo2){
         int leng;
         if (arreglo1.length > arreglo2.length){
             leng = arreglo1.length;
@@ -91,7 +91,6 @@ public class GuiaDeEjercicios1 {
         }
         return aux;
     }
-    */
     
     /*Ejercicio 6*/
     
