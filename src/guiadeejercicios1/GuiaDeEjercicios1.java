@@ -118,6 +118,27 @@ public class GuiaDeEjercicios1 {
 
     /*Ejercicio 12*/
 
+    /*Ejercicio 13*/
+
+    public static boolean buscadorEficiente(int [] array, int num){
+    	Arrays.sort(array);
+    	if ( num >= array[array.length/2] ) {
+    		for (int index = array.length/2; index < array.length; index++ ) {
+    			if(num == array[index])
+    				return true;
+    		}
+    	} else if (num <= array[array.length/2] )){
+			for (int index = 0; index < (array.length/2); index++ ) {
+    			if(num == array[index])
+    				return true;
+			}
+		}
+
+		return false;
+    }
+
+    /*Ejercicio 14*/
+
 
 
     /*  M A I N  */
@@ -347,6 +368,9 @@ public class GuiaDeEjercicios1 {
         for(int index1 = 0; index1 < vector12Tam; index1++){
             System.out.println(vector12[index]);
         }
+
+        /*Ejercicio 13*/
+
 
     }
     
