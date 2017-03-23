@@ -39,14 +39,9 @@ public class GuiaDeEjercicios1 {
         boolean limbo = true;
         for(int index = 0 ; index < arreglo.length; index++)
         {
-            if (arreglo[index]> 0)
-            
-              limbo = true;
-            
-            else
-                
+            if(arreglo[index] < 0) {
               limbo = false;
-            
+            }
         }
         return limbo;
     }
@@ -122,19 +117,21 @@ public class GuiaDeEjercicios1 {
 
     public static boolean buscadorEficiente(int [] array, int num){
     	Arrays.sort(array);
-    	if ( num >= array[array.length/2] ) {
-    		for (int index = array.length/2; index < array.length; index++ ) {
-    			if(num == array[index])
-    				return true;
-    		}
-    	} else if (num =< array[array.length/2])){
-			for (int index = 0; index < (array.length/2); index++ ) {
-    			if(num == array[index])
-    				return true;
-			}
-		}
-
-		return false;
+        int arryMitad = array.length/2;
+    	if ( num >= array[arryMitad] ) {
+            for (int index = arryMitad; index < array.length; index++ ) {
+                    if(num == array[index]){
+                            return true;
+                    }
+            }
+    	}else if(num >= array[arryMitad]){
+                for (int index = 0; index < arryMitad; index++ ) {
+                    if(num == array[index]){
+                           return true;
+                    }
+                }
+        }
+        return false;
     }
 
     /*Ejercicio 14*/
@@ -149,7 +146,7 @@ public class GuiaDeEjercicios1 {
     			duplicado[index] = 10;
     		}
     	}
-    	return duplicado[];
+    	return duplicado;
     }
 
     /*Ejercicio 15*/
@@ -243,7 +240,7 @@ public class GuiaDeEjercicios1 {
         int vectorBTam = in.nextInt();
         int [] B;
         B = new int [vectorBTam];
-        int vectorCTam = 0;
+        int vectorCTam;
         if(vectorATam > vectorBTam){
             vectorCTam = vectorATam;
         } else{
@@ -385,13 +382,13 @@ public class GuiaDeEjercicios1 {
         Arrays.sort(vector12);
         System.out.println("Orden Ascendente: ");
         for(int index1 = 0; index1 < vector12Tam; index1++){
-            System.out.println(vector12[index]);
+            System.out.println(vector12[index1]);
         }
-
+        //Buscar como pasar el array vector12 a arrayList
         Arrays.sort(vector12, Collections.reverseOrder());
         System.out.println("Orden Ascendente: ");
         for(int index1 = 0; index1 < vector12Tam; index1++){
-            System.out.println(vector12[index]);
+            System.out.println(vector12[index1]);
         }
 
         /*Ejercicio 13*/
@@ -405,8 +402,8 @@ public class GuiaDeEjercicios1 {
             vector13[index1] = in.nextInt();
         }
         System.out.println("Ingrese un valor");
-        int [] comparador13 = in.nextInt(comparador13);
-        int resultado13 = GuiaDeEjercicios1.buscadorEficiente(vector13, comparador13);
+        int comparador13 = in.nextInt();
+        boolean resultado13 = GuiaDeEjercicios1.buscadorEficiente(vector13, comparador13);
         System.out.println(resultado13);
 
         /*Ejercicio 14*/
@@ -419,8 +416,8 @@ public class GuiaDeEjercicios1 {
             System.out.println("Ingrese valor: ");
             vector14[index1] = in.nextInt();
         }
+        int len14 = vector14.length * 2;
         int [] vectorDuplicado14;
-        vectorDuplicado14 = new int [vector14*2];
         vectorDuplicado14 = GuiaDeEjercicios1.duplicador(vector14);
         System.out.println(Arrays.toString(vectorDuplicado14));
 
