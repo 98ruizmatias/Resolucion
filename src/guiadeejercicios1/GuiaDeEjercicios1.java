@@ -2,6 +2,7 @@ package guiadeejercicios1;
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.ArrayList;
 
 /**
  *
@@ -385,7 +386,8 @@ public class GuiaDeEjercicios1 {
             System.out.println(vector12[index1]);
         }
         //Buscar como pasar el array vector12 a arrayList
-        Arrays.sort(vector12, Collections.reverseOrder());
+        ArrayList<Integer> vector12List = new ArrayList<>(Arrays.asList(vector12));
+        Collections.reverse(vector12);
         System.out.println("Orden Ascendente: ");
         for(int index1 = 0; index1 < vector12Tam; index1++){
             System.out.println(vector12[index1]);
@@ -422,9 +424,5 @@ public class GuiaDeEjercicios1 {
         System.out.println(Arrays.toString(vectorDuplicado14));
 
         /*Ejercicio 15*/
-
-
-    }
-    
-    
+    }   
 }
