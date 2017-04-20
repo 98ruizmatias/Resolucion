@@ -64,9 +64,7 @@ public class GuiaDeEjercicios1 {
     }
     
     /*Ejercicio 5*/
-        
-    //Puede un metodo devolver un arreglo? y si se puede como se hace?
-    
+            
     public static int[] mixedArrays(int [] arreglo1, int [] arreglo2){
         int leng;
         if (arreglo1.length > arreglo2.length){
@@ -152,16 +150,40 @@ public class GuiaDeEjercicios1 {
 
     /*Ejercicio 15*/
 
-    /*
-    public static int[] sustitucion(int [] arreglo, int num){
-    	Arrays.sort(arreglo);
-    	for ( int index = 0; index < arreglo.length ; index++ ) {
-    		if ( num < (arreglo.length/2) ) {
-    			
-    		}
-    	}
-    }  
-	*/
+    public static int[] agregador(int [] array, int nuevo){
+        Arrays.sort(array);
+        int aux = 0;
+        for (int index = 0; index < array.length ; index++ ) {
+            if (nuevo > array[index] && nuevo < array[index+1]) {
+                aux = index
+                for (int indexB = array.length-1; indexB > aux ; indexB-- ) {
+                    array[indexB] = array[indexB-1];
+                }
+                array[index] = nuevo;
+            } else if ( nuevo = array[index]) {
+                aux = index
+                for (int indexB = array.length-1; indexB > aux ; indexB-- ) {
+                    array[indexB] = array[indexB-1];
+                }
+                array[index] = nuevo;
+            }
+        }
+    }
+
+    /*Ejercicio 16*/
+
+    public static boolean estrictamenteCreciente(int [] array){
+        boolean returner;
+        for (int index = 0; index < array.length ; index++) {
+            if (array[index] > array[index-1]) {
+                returner == true;
+            } else {
+                returner == false;
+            }
+        }
+        return returner;
+    }
+
 
 
     /*  M A I N  */
@@ -424,5 +446,65 @@ public class GuiaDeEjercicios1 {
         System.out.println(Arrays.toString(vectorDuplicado14));
 
         /*Ejercicio 15*/
+
+        System.out.print("Cuantos valores desea ingresar en el vector: ");
+        int vector15Tam = in.nextInt();
+        int [] vector15;
+        vector15 = new int [vector15Tam+1];
+        for(int index1 = 0; index1 < vector15Tam; index1++){
+            System.out.println("Ingrese valor: ");
+            vector15[index1] = in.nextInt();
+        }
+        vector15 = GuiaDeEjercicios1.agregador(vector15);
+        System.out.println(" Vector reordenado: { ")
+        for (int index = 0; index < vector15.length ; index++) {
+            System.out.print( vector15[index] +" ,");
+        }
+        System.out.print(" }");
+
+        /*Ejercicio 16*/
+
+        System.out.print("Cuantos valores desea ingresar en el vector: ");
+        int vector16Tam = in.nextInt();
+        int [] vector16;
+        vector16 = new int [vector16Tam+1];
+        for(int index1 = 0; index1 < vector16Tam; index1++){
+            System.out.println("Ingrese valor: ");
+            vector16[index1] = in.nextInt();
+        }
+        boolean determinador = GuiaDeEjercicios1.estrictamenteCreciente(vector16);
+        if (determinador == true) {
+            System.out.println("Es estrictamente Creciente");
+        } else {
+            System.out.println("No es estrictamente Creciente");
+        }
+
+        /*Ejercicio 17*/
+
+        System.out.print("Cuantos valores desea ingresar en el vector: ");
+        int vector17Tam = in.nextInt();
+        int [] vector17;
+        vector17 = new int [vector17Tam+1];
+        for(int index1 = 0; index1 < vector17Tam; index1++){
+            System.out.println("Ingrese valor: ");
+            vector17[index1] = in.nextInt();
+        }
+        boolean returner;
+        int contador = 0;
+        for (int index = 0; index < array.length ; index++) {
+            if (array[index] > array[index-1]) {
+                returner == true;
+            } else {
+                returner == false;
+                contador++;
+            }
+        }
+        if (determinador == true) {
+            System.out.println("Es estrictamente Creciente");
+        } else {
+            System.out.println("No es estrictamente Creciente y se rompe "+ contador+ "veces.");
+        }
+
+
     }   
 }
