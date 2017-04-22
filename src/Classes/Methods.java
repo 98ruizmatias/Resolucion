@@ -42,22 +42,22 @@ public class Methods{
         return trigger;
     }
 
-//    /*Ejercicio 4*/
-//
-//    public static int calculoBoleanos(boolean [] arrayBoole){
-//        int contadorPar = 0;
-//        int contadorInpar = 0;
-//        for(int index = 0; index < arrayBoole.length; index++){
-//
-//            if( (index % 2) == 0 || arrayBoole[index] == true){
-//                contadorPar++;
-//            } else if( (index % 2) != 0 || arrayBoole[index] == false) {
-//                contadorInpar++;
-//            }
-//        }
-//        return contadorPar * contadorInpar;
-//    }
-//
+    /*Ejercicio 4*/
+
+    public static int calculoBoleanosParPorInpar(boolean [] arrayBoole){
+        int contadorPar = 0;
+        int contadorInpar = 0;
+        for(int index = 0; index < arrayBoole.length; index++){
+
+            if( (index % 2) == 0 || arrayBoole[index] == true){
+                contadorPar++;
+            } else if( (index % 2) != 0 || arrayBoole[index] == false) {
+                contadorInpar++;
+            }
+        }
+        return contadorPar * contadorInpar;
+    }
+
 //    /*Ejercicio 5*/
 //
 //    public static int[] mixedArrays(int [] arreglo1, int [] arreglo2){

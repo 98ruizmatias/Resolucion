@@ -20,13 +20,13 @@ public class GuiaDeEjercicios1 {
 
         System.out.print("Cuantos valores desea ingresar: ");
         int vector1Tam = in.nextInt();
-        int [] vector1;
-        vector1 = new int [vector1Tam];
+        boolean [] vector1;
+        vector1 = new boolean [vector1Tam];
         for(int index1 = 0; index1 < vector1Tam; index1++){
             System.out.println("Ingrese valor: ");
-            vector1[index1] = in.nextInt();
+            vector1[index1] = in.nextBoolean();
         }
         System.out.print("El minimo de los valores ingresados es: ");
-        System.out.print( Methods.retornoDeArrayPositivosBoolean(vector1) );
-    }   
+        System.out.print( Methods.calculoBoleanosParPorInpar(vector1) );
+    }
 }
