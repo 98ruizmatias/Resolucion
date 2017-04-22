@@ -31,17 +31,17 @@ public class Methods{
 
     /*Ejercicio 3*/
 
-//    public static boolean positivos(int [] arreglo){
-//        boolean limbo = true;
-//        for(int index = 0 ; index < arreglo.length; index++)
-//        {
-//            if(arreglo[index] < 0) {
-//                limbo = false;
-//            }
-//        }
-//        return limbo;
-//    }
-//
+    public static boolean retornoDeArrayPositivosBoolean(int [] arreglo){
+        boolean trigger = true;
+        for(int index = 0 ; index < arreglo.length; index++)
+        {
+            if(arreglo[index] < 0) {
+                trigger = false;
+            }
+        }
+        return trigger;
+    }
+
 //    /*Ejercicio 4*/
 //
 //    public static int calculoBoleanos(boolean [] arrayBoole){
