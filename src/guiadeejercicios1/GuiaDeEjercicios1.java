@@ -27,6 +27,6 @@ public class GuiaDeEjercicios1 {
             vector1[index1] = in.nextInt();
         }
         System.out.print("El minimo de los valores ingresados es: ");
-        System.out.print( Methods.posicionDelMenorValorDelArray(vector1) );
+        System.out.print( Methods.posicionDelMaximoValorDelArray(vector1) );
     }   
 }

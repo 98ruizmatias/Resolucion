@@ -16,19 +16,21 @@ public class Methods{
     }
 
     /*Ejercicio 2*/
-//
-//    public static int minimo(int [] array1){
-//        int aux = array1[0];
-//        for(int index = 0; index < array1.length; index++){
-//            if(array1[index] == aux){
-//                aux = array1[index];
-//            }
-//        }
-//        return aux;
-//    }
-//
-//    /*Ejercicio 3*/
-//
+
+    public static int posicionDelMaximoValorDelArray(int [] array1){
+        int aux = array1[0];
+        int pos = 0;
+        for(int index = 0; index < array1.length; index++){
+            if (array1[index] > aux) {
+                aux = array1[index];
+                pos = index;
+            }
+        }
+        return (pos+1);
+    }
+
+    /*Ejercicio 3*/
+
 //    public static boolean positivos(int [] arreglo){
 //        boolean limbo = true;
 //        for(int index = 0 ; index < arreglo.length; index++)
