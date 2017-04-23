@@ -27,8 +27,7 @@ public class GuiaDeEjercicios1 {
             vector1[index1] = in.nextInt();
         }
         System.out.println("El minimo de los valores ingresados es: ");
-        double [] resultado;
-        resultado = Methods.arrayEscalarDePi(vector1);
+        int [] resultado = Methods.ordenDeArrayDescendente(vector1);
         for (int index = 0; index < resultado.length; index++){
                 System.out.println(resultado[index]);
         }

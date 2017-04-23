@@ -104,25 +104,68 @@ public class Methods{
         return escalar;
     }
 
+    /*Ejercicio 9*/
 
-//    /*Ejercicio 9*/
-//
-//    /*Ejercicio 10*/
-//
-//    /*Ejercicio 11*/
-//
-//    public static int buscadorNum(int [] array11, int num){
-//        int resultado = 0;
-//        for(int index = 0; index < array11.length; index++ ){
-//            if(array11[index] == num){
-//                resultado = index;
-//            }
-//        }
-//        return resultado;
-//    }
-//
-//    /*Ejercicio 12*/
-//
+    public static int productoEscalarDeDosArrays(int [] A, int [] B){
+        int C = 0;
+        for (int index = 0; index < A.length; index++){
+            C = C + (A[index] * B[index]);
+        }
+        return C;
+    }
+
+    /*Ejercicio 10*/
+
+    public static int productoEscalarDeArrayPorSiMismo(int [] A){
+        int C = 0;
+        for (int index = 0; index < A.length; index++){
+            C = C + (A[index] * A[A.length - index]);
+        }
+        return C;
+    }
+
+    /*Ejercicio 11*/
+
+    public static int buscadorDeNumeroEnArray(int [] array11, int num){
+        int resultado = -1;
+        for(int index = 0; index < array11.length; index++ ){
+            if(array11[index] == num){
+                resultado = index;
+            }
+        }
+        return resultado;
+    }
+
+    /*Ejercicio 12*/
+
+    public static int[] ordenDeArrayAscendente(int [] array){
+        int aux;
+        for(int i=0;i<array.length;i++){
+            for(int j=(i+1);j<array.length;j++){
+                if (array[i]>array[j]){
+                    aux = array[i];
+                    array[i]=array[j];
+                    array[j]=aux;
+                }
+            }
+        }
+        return array;
+    }
+
+    public static int[] ordenDeArrayDescendente(int [] array){
+        int aux;
+        for(int i=0;i<array.length;i++){
+            for(int j=(i+1);j<array.length;j++){
+                if (array[i]<array[j]){
+                    aux = array[j];
+                    array[j]=array[i];
+                    array[i]= aux;
+                }
+            }
+        }
+        return array;
+    }
+
 //    /*Ejercicio 13*/
 //
 //    public static boolean buscadorEficiente(int [] array, int num){
