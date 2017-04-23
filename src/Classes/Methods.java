@@ -94,9 +94,17 @@ public class Methods{
         return invertido;
     }
 
+    /*Ejercicio 8*/
 
-//    /*Ejercicio 8*/
-//
+    public static double[] arrayEscalarDePi(int [] array){
+        double [] escalar = new double[array.length];
+        for (int index = 0; index < array.length; index++){
+            escalar[index] = array[index] * 3.14;
+        }
+        return escalar;
+    }
+
+
 //    /*Ejercicio 9*/
 //
 //    /*Ejercicio 10*/
