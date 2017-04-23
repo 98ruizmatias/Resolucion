@@ -47,46 +47,54 @@ public class Methods{
     public static int calculoBoleanosParPorInpar(boolean [] arrayBoole){
         int contadorPar = 0;
         int contadorInpar = 0;
-        for(int index = 0; index < arrayBoole.length; index++){
 
-            if( (index % 2) == 0 || arrayBoole[index] == true){
-                contadorPar++;
-            } else if( (index % 2) != 0 || arrayBoole[index] == false) {
-                contadorInpar++;
+            for(int index = 0; index < arrayBoole.length; index++){
+
+        if( (index % 2) == 0 || arrayBoole[index] == true){
+            contadorPar++;
+        } else if( (index % 2) != 0 || arrayBoole[index] == false) {
+            contadorInpar++;
+        }
+    }
+        return contadorPar * contadorInpar;
+}
+
+    /*Ejercicio 5*/
+
+    public static int[] multiplicacionParAttay1porImparArray2(int [] arreglo1, int [] arreglo2){
+        int []aux = new int[arreglo1.length];
+        for (int index = 0; index < aux.length; index++ ){
+            if (index%2 == 0){
+                aux[index] = arreglo1[index];
+            }
+            else {
+                aux[index] = arreglo2[index];
             }
         }
-        return contadorPar * contadorInpar;
+        return aux;
     }
 
-//    /*Ejercicio 5*/
-//
-//    public static int[] mixedArrays(int [] arreglo1, int [] arreglo2){
-//        int leng;
-//        if (arreglo1.length > arreglo2.length){
-//            leng = arreglo1.length;
-//        } else{
-//            leng = arreglo2.length;
-//        }
-//
-//        int [] aux;
-//        aux = new int[leng];
-//        for(int index = 0; index < arreglo1.length; index++){
-//            if( index%2 != 0 ){
-//                aux[index] = arreglo1[index];
-//            }
-//        }
-//        for(int index = 0; index < arreglo2.length; index++){
-//            if( index%2 == 0 ){
-//                aux[index] = arreglo2[index];
-//            }
-//        }
-//        return aux;
-//    }
-//
-//    /*Ejercicio 6*/
-//
-//    /*Ejercicio 7*/
-//
+    /*Ejercicio 6*/
+
+    public static int[] aPorBIgualC(int [] A, int [] B){
+        int [] C = new int[A.length];
+        for (int index = 0; index < C.length; index++){
+            C[index] = A[index] * B[C.length-index];
+        }
+        return C;
+    }
+
+    /*Ejercicio 7*/
+
+    public static int[] invertirArray(int [] array){
+        int [] invertido = new int[array.length];
+        for (int index = 0; index < array.length; index++){
+            invertido[index] = array[array.length-1-index];
+        }
+        return invertido;
+    }
+
+
 //    /*Ejercicio 8*/
 //
 //    /*Ejercicio 9*/
