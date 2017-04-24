@@ -166,76 +166,62 @@ public class Methods{
         return array;
     }
 
-//    /*Ejercicio 13*/
-//
-//    public static boolean buscadorEficiente(int [] array, int num){
-//        Arrays.sort(array);
-//        int arryMitad = array.length/2;
-//        if ( num >= array[arryMitad] ) {
-//            for (int index = arryMitad; index < array.length; index++ ) {
-//                if(num == array[index]){
-//                    return true;
-//                }
-//            }
-//        }else if(num >= array[arryMitad]){
-//            for (int index = 0; index < arryMitad; index++ ) {
-//                if(num == array[index]){
-//                    return true;
-//                }
-//            }
-//        }
-//        return false;
-//    }
-//
-//    /*Ejercicio 14*/
-//
-//    public static int[] duplicador(int [] array){
-//        int [] duplicado;
-//        duplicado = new int [array.length*2];
-//        for(int index = 0; index < duplicado.length; index++){
-//            if (index < array.length){
-//                array[index] = duplicado [index];
-//            } else {
-//                duplicado[index] = 10;
-//            }
-//        }
-//        return duplicado;
-//    }
-//
-//    /*Ejercicio 15*/
-//
-//    public static int[] agregador(int [] array, int nuevo){
-//        Arrays.sort(array);
-//        int aux = 0;
-//        for (int index = 0; index < array.length ; index++ ) {
-//            if (nuevo > array[index] && nuevo < array[index+1]) {
-//                aux = index;
-//                for (int indexB = array.length-1; indexB > aux ; indexB-- ) {
-//                    array[indexB] = array[indexB-1];
-//                }
-//                array[index] = nuevo;
-//            } else if ( nuevo = array[index]) {
-//                aux = index
-//                for (int indexB = array.length-1; indexB > aux ; indexB-- ) {
-//                    array[indexB] = array[indexB-1];
-//                }
-//                array[index] = nuevo;
-//            }
-//        }
-//    }
-//
-//    /*Ejercicio 16*/
-//
-//    public static boolean estrictamenteCreciente(int [] array){
-//        boolean returner;
-//        for (int index = 0; index < array.length ; index++) {
-//            if (array[index] > array[index-1]) {
-//                returner == true;
-//            } else {
-//                returner == false;
-//            }
-//        }
-////        return returner;
-//    }
+    /*Ejercicio 13*/
+
+
+
+    /*Ejercicio 14*/
+
+    public static int[] duplicadorDeArrayMasDiez(int [] array){
+        int [] array10 = new int[array.length*2];
+        for (int index = 0; index < array.length; index++){
+            array10[index] = array[index];
+        }
+        for (int index = array.length; index < array10.length; index++){
+            array10[index] = 10;
+        }
+        return array10;
+    }
+
+    /*Ejercicio 15*/
+
+    public static int[] agregadorDeElementeoAAarray(int [] array, int nuevo){
+        int aux;
+        for(int i=0;i<array.length;i++){
+            for(int j=(i+1);j<array.length;j++){
+                if (array[i]<array[j]){
+                    aux = array[j];
+                    array[j]=array[i];
+                    array[i]= aux;
+                }
+            }
+        }
+        array[array.length-1] = nuevo;
+        for (int index = array.length-1; index > 1; index--){
+            int j = index - 1;
+            if (array[index] < array[j]){
+                aux = array[index];
+                array[index] = array[j];
+                array[j] = aux;
+            }
+        }
+        return array;
+    }
+
+    /*Ejercicio 16*/
+
+    public static boolean corroboradorEstrictamenteCreciente(int [] array){
+        int aux = array[0];
+        for (int index = 0; index < array.length ; index++) {
+            if (array[index] > array[index+1]) {
+                aux = array[index];
+                array[index] = array[index+1];
+                array[index] = aux;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
 
 }
